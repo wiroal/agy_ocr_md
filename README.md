@@ -59,7 +59,7 @@ sudo apt-get update && sudo apt-get install -y \
 
 ### 2. Dependencias de Python:
 ```bash
-cd /home/wrozoa/obsidian/herramientas_Py_RStudio/src/agy_ocr_md
+cd /home/user/agy_ocr_md
 pip install -r requirements.txt
 ```
 
