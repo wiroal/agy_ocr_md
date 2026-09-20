@@ -1,0 +1,20 @@
+# Dependencias para agy_ocr_md
+# Dependencias base (ultrarrápidas)
+pymupdf>=1.23.0
+numpy>=1.24.0
+opencv-python-headless>=4.8.0
+
+# Dependencias para Estructura y Tablas (Docling)
+docling>=2.0.0
+
+# Dependencias para OCR Manuscrito con Deep Learning (DocTR)
+# Se recomienda instalar con soporte de GPU si está disponible
+python-doctr[torch]>=0.7.0
+torchvision
+
+# Utilidades de datos y reportes
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# Requisitos a nivel de sistema operativo (Debian/Ubuntu/WSL):
+# sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-spa poppler-utils ghostscript
