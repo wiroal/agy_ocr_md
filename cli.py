@@ -58,6 +58,9 @@ def main():
 
     if input_path.is_file():
         output_file = args.output or input_path.with_suffix(".md")
+        if args.output and args.output.suffix.lower() != ".md":
+            output_file = args.output / input_path.with_suffix(".md").name
+        output_file.parent.mkdir(parents=True, exist_ok=True)
         print(f"📄 Procesando archivo: {input_path.name}")
         force_engine = None if args.mode == "hybrid" else args.mode
         res = pipeline.process_file(input_path, output_file, force_engine=force_engine)
